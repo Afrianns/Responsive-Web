@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --text-first: #4e5150;
+  --text-second: #bdbdbd;
+  --text-forth: #a9a9a9;
+  --text-fifth: #4e5150;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.profile {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.profile img {
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  max-width: 8rem;
+}
+
+.profile h1 {
+  margin: 0.5rem 0;
+  color: var(--text-first);
+  font-size: 24px;
+}
+
+.profile p {
+  font-size: 14px;
+  color: var(--text-forth);
+}
+
+.data-info {
+  width: 350px;
+  justify-content: space-between;
+  display: flex;
+  margin: 1.5rem auto;
+  align-content: center;
+}
+
+.data-info .info {
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  padding-top: 6px;
+  background-color: #e5e5e5;
+}
+
+.info p {
+  color: var(--text-forth);
+}
+.info h2 {
+  color: var(--text-fifth);
+}
+
+.gallery {
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "img1 img2 img2" "img3 img3 img4" "img5 img6 img4";
+}
+
+.gallery img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.img-1 {
+  grid-area: img1;
+}
+.img-2 {
+  grid-area: img2;
+}
+.img-3 {
+  grid-area: img3;
+}
+.img-4 {
+  grid-area: img4;
+}
+.img-5 {
+  grid-area: img5;
+}
+.img-6 {
+  grid-area: img6;
+}
+
+footer p {
+  color: #b9bdcf;
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 0.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    margin: 0 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    margin: 0 0.5rem;
+  }
+  .data-info .info {
+    padding: 0.4rem;
+    margin: 0.5rem;
+    height: 45px;
+  }
+  .info p {
+    font-size: 0.75rem;
+  }
+  .info h2 {
+    font-size: 1rem;
+  }
+  .profile img {
+    width: 5rem;
+  }
+
+  .gallery {
+    margin: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "img1 img2" "img3 img3" "img5 img4" "img6 img4";
+  }
+  .gallery img {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .data-info {
+    width: 100%;
+  }
+}
