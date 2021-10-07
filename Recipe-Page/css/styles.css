@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto 1rem;
+}
+h1,
+h2,
+.Ingredients-content h3,
+h2,
+.mark {
+  font-family: "Playfair Display", serif;
+}
+
+.head-title p,
+.boxes {
+  margin: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+  max-width: 50ch;
+}
+
+.infos {
+  align-items: flex-start;
+  display: flex;
+}
+.infos img {
+  transform: rotate(90deg);
+  margin: 1rem 0.2rem;
+}
+
+.dishes {
+  object-fit: cover;
+  width: 100%;
+}
+
+.wrapper {
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* right content */
+
+.wrapper .estimate-time {
+  font-family: "Montserrat", sans-serif;
+  width: 30%;
+  height: 100%;
+  padding: 1rem;
+  box-shadow: 1px 1px 50px rgba(145, 144, 144, 0.342);
+  border-radius: 10px;
+}
+.estimate-cook-time {
+  margin: 2rem 0rem;
+  display: flex;
+  align-items: center;
+}
+.estimate-cook-time .text-orange {
+  color: #f2994a;
+}
+
+.estimate-cook-time h3 {
+  font-weight: 500;
+}
+.estimate-cook-time p {
+  font-size: 0.75rem;
+  color: #bdbdbd;
+  font-weight: 700;
+}
+
+.estimate-cook-time img {
+  max-width: 100%;
+  margin: 0.7rem 0.75rem .7rem 0;
+}
+
+.wrapper .Ingredients-content {
+  width: 100%;
+  margin-right: 5rem;
+  margin-top:1rem;
+}
+
+/* Ingredients content */
+
+.Ingredients-content {
+  font-family: "Montserrat", sans-serif;
+}
+
+.Ingredients-content h2 {
+  margin-bottom: 1rem;
+}
+.Ingredients-content h3 {
+  margin: 1rem 0;
+}
+
+/* .Ingredients-content . */
+
+.checkboxes {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxes input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+.checkboxes input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxes input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkboxes .checkmark:after {
+  left: 6px;
+  top: 5px;
+  width: 5px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* tutorial how to's */
+.instructions {
+  width: 60%;
+}
+
+.boxes {
+  display: block;
+  position: relative;
+  padding-left: 44px;
+  margin: 1.5rem 0;
+}
+
+.mark {
+  position: absolute;
+  background: #f2994a;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 1050px) {
+  .container {
+    width: 95vw;
+  }
+  .wrapper .estimate-time {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .wrapper .estimate-time {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .estimate-time .estimate-cook-time {
+    margin: 0.75rem 0;
+  }
+  .estimate-time .estimate-cook-time:first-child {
+    grid-column: 1 / 4;
+  }
+
+  .instructions {
+    width: 100%;
+  }
+  .estimate-cook-time h3 {
+    font-size: 1rem;
+  }
+  .estimate-cook-time p {
+    font-size: 0.75rem;
+  }
+  
+  .checkboxes{
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .wrapper .estimate-time {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estimate-time .estimate-cook-time:first-child {
+    grid-column: 1;
+  }
+}
