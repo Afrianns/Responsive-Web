@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/devchallenges.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Chekout_Page</title>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <div class="container">
+      <div class="form-content">
+        <form action="" method="post">
+          <div class="contact">
+            <h2>Contact infomation</h2>
+            <label class="subtitle" for="email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="icon icon-email"
+              placeholder="Enter you email..."
+              required
+            />
+            <br />
+            <label class="subtitle" for="phone">Phone</label>
+            <input
+              class="icon icon-phone"
+              type="number"
+              name="phone"
+              id="phone"
+              min="0"
+              required
+              placeholder="Enter you phone..."
+            />
+          </div>
+
+          <div class="shipping">
+            <h2 class="ship-address">Shipping address</h2>
+            <label class="subtitle" for="name">Full name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="icon icon-user"
+              value="Rodney Cotton"
+              required
+            />
+            <br />
+            <label class="subtitle" for="address">Address</label>
+            <input
+              type="text"
+              class="icon icon-address"
+              name="address"
+              id="address"
+              placeholder="Your address."
+              required
+            />
+            <br />
+            <label class="subtitle" for="city">City</label>
+            <input
+              type="text"
+              name="city"
+              id="city"
+              class="icon icon-city"
+              placeholder="Your city."
+              required
+            />
+
+            <br />
+            <div class="location">
+              <div class="subtitle_location">
+                <label class="subtitle" for="county">Country</label>
+
+                <select name="country" id="country" class="icon icon-country">
+                  <option value="select" class="select">Your country...</option>
+                  <option value="United-Kingdom">United Kingdom</option>
+                  <option value="USA">USA</option>
+                  <option value="Japan">Japan</option>
+                  <option value="Canada">Canada</option>
+                </select>
+              </div>
+
+              <div class="subtitle_location">
+                <label class="subtitle" for="postal-code">Postal code</label>
+                <input
+                  type="text"
+                  class="icon icon-postcode"
+                  name="postal-code"
+                  id="postal-code"
+                  required
+                  placeholder="Your Postal Code"
+                />
+              </div>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="check" id="check" required />
+              <label for="check">
+                <p>Save this information for next time</p></label
+              >
+              <br />
+            </div>
+          </div>
+          <button type="submit">Continue</button>
+        </form>
+      </div>
+
+      <div class="side-content">
+        <div class="display-product">
+          <img src="./assets/images/photo1.png" alt="A brown bag" />
+          <div class="desc-product">
+            <h3>Vintage Backbag</h3>
+            <div class="price">
+              <p>$54.99</p>
+              <p>$94.99</p>
+            </div>
+
+            <div class="buy-total">
+              <img src="./assets/icons/minus-regular-24.png" alt="min" />
+              <p>1</p>
+              <img src="./assets/icons/plus-regular-24.png" alt="plus" />
+            </div>
+          </div>
+        </div>
+
+        <div class="display-product">
+          <img src="./assets/images/photo2.png" alt="A brown bag" />
+          <div class="desc-product">
+            <h3>Levi Shoes</h3>
+            <div class="price">
+              <p>$74.99</p>
+              <p>$124.99</p>
+            </div>
+
+            <div class="buy-total">
+              <img src="./assets/icons/minus-regular-24.png" alt="min" />
+              <p>1</p>
+              <img src="./assets/icons/plus-regular-24.png" alt="plus" />
+            </div>
+          </div>
+        </div>
+        <section class="border">
+          <hr />
+          <div class="worth">
+            <p>Shipping</p>
+            <p>$19</p>
+          </div>
+          <hr />
+          <div class="worth">
+            <p>Total</p>
+            <p>$148.98</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
